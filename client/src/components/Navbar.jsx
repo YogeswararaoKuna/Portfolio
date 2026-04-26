@@ -37,19 +37,21 @@ export default function Navbar() {
       location.pathname === path
         ? "font-bold text-black dark:text-white"
         : "text-gray-600 dark:text-gray-300"
-    }`;
+    } hover:text-black dark:hover:text-white transition`;
 
   return (
     <nav className="sticky top-0 z-50 bg-white dark:bg-[#020617] shadow-md">
 
       <div className="flex items-center justify-between px-4 md:px-10 py-4">
 
-        {/* LOGO */}
-        <div className="bg-black text-white dark:bg-white dark:text-black 
-        w-10 h-10 flex items-center justify-center 
-        rounded-full font-bold shadow-md">
-          YK
-        </div>
+        {/* 🔥 CLICKABLE LOGO */}
+        <Link to="/">
+          <div className="bg-black text-white dark:bg-white dark:text-black 
+          w-10 h-10 flex items-center justify-center 
+          rounded-full font-bold shadow-md cursor-pointer hover:scale-105 transition">
+            YK
+          </div>
+        </Link>
 
         {/* DESKTOP MENU */}
         <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 gap-8 font-medium">
@@ -105,7 +107,6 @@ export default function Navbar() {
         <div className="md:hidden bg-white dark:bg-[#020617] 
         px-6 py-4 space-y-4 border-t dark:border-gray-700">
 
-          {/* NAV LINKS */}
           <div className="flex flex-col gap-2 text-lg font-medium">
             <Link to="/" onClick={() => setMenuOpen(false)} className={linkClass("/")}>Home</Link>
             <Link to="/about" onClick={() => setMenuOpen(false)} className={linkClass("/about")}>About</Link>
@@ -113,9 +114,7 @@ export default function Navbar() {
             <Link to="/certificates" onClick={() => setMenuOpen(false)} className={linkClass("/certificates")}>Certificates</Link>
           </div>
 
-          {/* ICONS (MOBILE FIXED VISIBILITY) */}
           <div className="flex justify-center gap-6 text-2xl pt-3">
-
             <a href="https://github.com/YogeswararaoKuna" target="_blank" rel="noopener noreferrer">
               <FaGithub className="text-black dark:text-white" />
             </a>
@@ -131,7 +130,6 @@ export default function Navbar() {
             <a href="https://youtube.com/@yogidhoni?si=i3zL4SCPigHWB-P3" target="_blank" rel="noopener noreferrer">
               <FaYoutube className="text-red-500" />
             </a>
-
           </div>
         </div>
       )}
