@@ -10,7 +10,6 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
-  // Load theme
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
 
@@ -23,7 +22,6 @@ export default function Navbar() {
     }
   }, []);
 
-  // Toggle dark mode
   const toggleDark = () => {
     if (dark) {
       document.documentElement.classList.remove("dark");
@@ -35,7 +33,6 @@ export default function Navbar() {
     setDark(!dark);
   };
 
-  // Active link style
   const linkClass = (path) =>
     `cursor-pointer ${
       location.pathname === path
@@ -48,14 +45,14 @@ export default function Navbar() {
 
       <div className="flex items-center justify-between px-4 md:px-10 py-4">
 
-        {/* LEFT LOGO */}
+        {/* LOGO */}
         <div className="bg-black text-white dark:bg-white dark:text-black 
         w-10 h-10 flex items-center justify-center 
         rounded-full font-bold shadow-md">
           YK
         </div>
 
-        {/* CENTER MENU (DESKTOP ONLY) */}
+        {/* CENTER MENU */}
         <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 gap-8 font-medium">
           <Link to="/" className={linkClass("/")}>Home</Link>
           <Link to="/about" className={linkClass("/about")}>About</Link>
@@ -66,28 +63,28 @@ export default function Navbar() {
         {/* RIGHT SIDE */}
         <div className="flex items-center gap-4">
 
-          {/* SOCIAL ICONS (DESKTOP) */}
+          {/* ICONS */}
           <div className="hidden md:flex gap-4 text-lg">
 
             <a href="https://github.com/YogeswararaoKuna" target="_blank" rel="noopener noreferrer">
-              <FaGithub className="text-black dark:text-white hover:scale-110 transition" />
+              <FaGithub />
             </a>
 
             <a href="https://www.linkedin.com/in/yogeswara-rao-kuna-a166802b9" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin className="text-blue-600 hover:scale-110 transition" />
+              <FaLinkedin />
             </a>
 
             <a href="https://leetcode.com/u/kuna_yogeswararao/" target="_blank" rel="noopener noreferrer">
-              <SiLeetcode className="text-orange-500 hover:scale-110 transition" />
+              <SiLeetcode />
             </a>
 
             <a href="https://youtube.com/@yogidhoni?si=i3zL4SCPigHWB-P3" target="_blank" rel="noopener noreferrer">
-              <FaYoutube className="text-red-500 hover:scale-110 transition" />
+              <FaYoutube />
             </a>
 
           </div>
 
-          {/* DARK MODE BUTTON */}
+          {/* DARK MODE */}
           <button
             onClick={toggleDark}
             className="border px-3 py-1 rounded-lg text-sm 
@@ -100,7 +97,7 @@ export default function Navbar() {
           {/* MOBILE MENU BUTTON */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden text-2xl text-black dark:text-white"
+            className="md:hidden text-2xl"
           >
             {menuOpen ? "✖" : "☰"}
           </button>
@@ -112,28 +109,27 @@ export default function Navbar() {
       {menuOpen && (
         <div className="md:hidden px-6 pb-4 bg-white dark:bg-[#020617] space-y-4">
 
-          <Link to="/" onClick={() => setMenuOpen(false)} className={linkClass("/")}>Home</Link>
-          <Link to="/about" onClick={() => setMenuOpen(false)} className={linkClass("/about")}>About</Link>
-          <Link to="/projects" onClick={() => setMenuOpen(false)} className={linkClass("/projects")}>Projects</Link>
-          <Link to="/certificates" onClick={() => setMenuOpen(false)} className={linkClass("/certificates")}>Certificates</Link>
+          <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
+          <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
+          <Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
+          <Link to="/certificates" onClick={() => setMenuOpen(false)}>Certificates</Link>
 
-          {/* MOBILE ICONS */}
-          <div className="flex gap-5 pt-3 text-xl">
+          <div className="flex gap-5 text-xl pt-3">
 
             <a href="https://github.com/YogeswararaoKuna" target="_blank" rel="noopener noreferrer">
-              <FaGithub className="text-black dark:text-white" />
+              <FaGithub />
             </a>
 
             <a href="https://www.linkedin.com/in/yogeswara-rao-kuna-a166802b9" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin className="text-blue-600" />
+              <FaLinkedin />
             </a>
 
             <a href="https://leetcode.com/u/kuna_yogeswararao/" target="_blank" rel="noopener noreferrer">
-              <SiLeetcode className="text-orange-500" />
+              <SiLeetcode />
             </a>
 
             <a href="https://youtube.com/@yogidhoni?si=i3zL4SCPigHWB-P3" target="_blank" rel="noopener noreferrer">
-              <FaYoutube className="text-red-500" />
+              <FaYoutube />
             </a>
 
           </div>
