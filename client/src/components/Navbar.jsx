@@ -69,20 +69,16 @@ export default function Navbar() {
           {/* ICONS */}
           <div className="hidden md:flex gap-4 text-lg">
 
-            <a href="https://github.com/YogeswararaoKuna" target="_blank" rel="noreferrer">
-              <FaGithub className="text-black dark:text-white hover:scale-110 transition" />
+<a href="https://github.com/YogeswararaoKuna" target="_blank" rel="noopener noreferrer">              <FaGithub className="text-black dark:text-white hover:scale-110 transition" />
             </a>
 
-            <a href="https://www.linkedin.com/in/yogeswara-rao-kuna-a166802b9" target="_blank" rel="noreferrer">
-              <FaLinkedin className="text-blue-600 hover:scale-110 transition" />
+<a href="https://www.linkedin.com/in/yogeswara-rao-kuna-a166802b9" target="_blank" rel="noopener noreferrer">              <FaLinkedin className="text-blue-600 hover:scale-110 transition" />
             </a>
 
-            <a href="https://leetcode.com/u/kuna_yogeswararao/" target="_blank" rel="noreferrer">
-              <SiLeetcode className="text-orange-500 hover:scale-110 transition" />
+<a href="https://leetcode.com/u/kuna_yogeswararao/" target="_blank" rel="noopener noreferrer">              <SiLeetcode className="text-orange-500 hover:scale-110 transition" />
             </a>
 
-            <a href="https://youtube.com/@yogidhoni" target="_blank" rel="noreferrer">
-              <FaYoutube className="text-red-500 hover:scale-110 transition" />
+<a href="https://youtube.com/@yogidhoni" target="_blank" rel="noopener noreferrer">              <FaYoutube className="text-red-500 hover:scale-110 transition" />
             </a>
 
           </div>
@@ -120,20 +116,16 @@ export default function Navbar() {
           {/* ICONS */}
           <div className="flex gap-4 pt-3 text-xl">
 
-            <a href="https://github.com/YogeswararaoKuna" target="_blank" rel="noreferrer">
-              <FaGithub className="text-black dark:text-white" />
+<a href="https://github.com/YogeswararaoKuna" target="_blank" rel="noopener noreferrer">              <FaGithub className="text-black dark:text-white" />
             </a>
 
-            <a href="https://www.linkedin.com/in/yogeswara-rao-kuna-a166802b9" target="_blank" rel="noreferrer">
-              <FaLinkedin className="text-blue-600" />
+<a href="https://www.linkedin.com/in/yogeswara-rao-kuna-a166802b9" target="_blank" rel="noopener noreferrer">              <FaLinkedin className="text-blue-600" />
             </a>
 
-            <a href="https://leetcode.com/u/kuna_yogeswararao/" target="_blank" rel="noreferrer">
-              <SiLeetcode className="text-orange-500" />
+<a href="https://leetcode.com/u/kuna_yogeswararao/" target="_blank" rel="noopener noreferrer">              <SiLeetcode className="text-orange-500" />
             </a>
 
-            <a href="https://youtube.com/@yogidhoni" target="_blank" rel="noreferrer">
-              <FaYoutube className="text-red-500" />
+<a href="https://youtube.com/@yogidhoni" target="_blank" rel="noopener noreferrer">              <FaYoutube className="text-red-500" />
             </a>
 
           </div>
