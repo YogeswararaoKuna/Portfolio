@@ -35,7 +35,7 @@ export default function Navbar() {
     setDark(!dark);
   };
 
-  // Active link
+  // Active link style
   const linkClass = (path) =>
     `cursor-pointer ${
       location.pathname === path
@@ -55,7 +55,7 @@ export default function Navbar() {
           YK
         </div>
 
-        {/* CENTER MENU (DESKTOP) */}
+        {/* CENTER MENU (DESKTOP ONLY) */}
         <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 gap-8 font-medium">
           <Link to="/" className={linkClass("/")}>Home</Link>
           <Link to="/about" className={linkClass("/about")}>About</Link>
@@ -66,24 +66,28 @@ export default function Navbar() {
         {/* RIGHT SIDE */}
         <div className="flex items-center gap-4">
 
-          {/* ICONS */}
+          {/* SOCIAL ICONS (DESKTOP) */}
           <div className="hidden md:flex gap-4 text-lg">
 
-<a href="https://github.com/YogeswararaoKuna" target="_blank" rel="noopener noreferrer">              <FaGithub className="text-black dark:text-white hover:scale-110 transition" />
+            <a href="https://github.com/YogeswararaoKuna" target="_blank" rel="noopener noreferrer">
+              <FaGithub className="text-black dark:text-white hover:scale-110 transition" />
             </a>
 
-<a href="https://www.linkedin.com/in/yogeswara-rao-kuna-a166802b9" target="_blank" rel="noopener noreferrer">              <FaLinkedin className="text-blue-600 hover:scale-110 transition" />
+            <a href="https://www.linkedin.com/in/yogeswara-rao-kuna-a166802b9" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin className="text-blue-600 hover:scale-110 transition" />
             </a>
 
-<a href="https://leetcode.com/u/kuna_yogeswararao/" target="_blank" rel="noopener noreferrer">              <SiLeetcode className="text-orange-500 hover:scale-110 transition" />
+            <a href="https://leetcode.com/u/kuna_yogeswararao/" target="_blank" rel="noopener noreferrer">
+              <SiLeetcode className="text-orange-500 hover:scale-110 transition" />
             </a>
 
-<a href="https://youtube.com/@yogidhoni" target="_blank" rel="noopener noreferrer">              <FaYoutube className="text-red-500 hover:scale-110 transition" />
+            <a href="https://youtube.com/@yogidhoni?si=i3zL4SCPigHWB-P3" target="_blank" rel="noopener noreferrer">
+              <FaYoutube className="text-red-500 hover:scale-110 transition" />
             </a>
 
           </div>
 
-          {/* DARK MODE */}
+          {/* DARK MODE BUTTON */}
           <button
             onClick={toggleDark}
             className="border px-3 py-1 rounded-lg text-sm 
@@ -106,26 +110,30 @@ export default function Navbar() {
 
       {/* MOBILE MENU */}
       {menuOpen && (
-        <div className="md:hidden px-6 pb-4 bg-white dark:bg-[#020617] space-y-3">
+        <div className="md:hidden px-6 pb-4 bg-white dark:bg-[#020617] space-y-4">
 
           <Link to="/" onClick={() => setMenuOpen(false)} className={linkClass("/")}>Home</Link>
           <Link to="/about" onClick={() => setMenuOpen(false)} className={linkClass("/about")}>About</Link>
           <Link to="/projects" onClick={() => setMenuOpen(false)} className={linkClass("/projects")}>Projects</Link>
           <Link to="/certificates" onClick={() => setMenuOpen(false)} className={linkClass("/certificates")}>Certificates</Link>
 
-          {/* ICONS */}
-          <div className="flex gap-4 pt-3 text-xl">
+          {/* MOBILE ICONS */}
+          <div className="flex gap-5 pt-3 text-xl">
 
-<a href="https://github.com/YogeswararaoKuna" target="_blank" rel="noopener noreferrer">              <FaGithub className="text-black dark:text-white" />
+            <a href="https://github.com/YogeswararaoKuna" target="_blank" rel="noopener noreferrer">
+              <FaGithub className="text-black dark:text-white" />
             </a>
 
-<a href="https://www.linkedin.com/in/yogeswara-rao-kuna-a166802b9" target="_blank" rel="noopener noreferrer">              <FaLinkedin className="text-blue-600" />
+            <a href="https://www.linkedin.com/in/yogeswara-rao-kuna-a166802b9" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin className="text-blue-600" />
             </a>
 
-<a href="https://leetcode.com/u/kuna_yogeswararao/" target="_blank" rel="noopener noreferrer">              <SiLeetcode className="text-orange-500" />
+            <a href="https://leetcode.com/u/kuna_yogeswararao/" target="_blank" rel="noopener noreferrer">
+              <SiLeetcode className="text-orange-500" />
             </a>
 
-<a href="https://youtube.com/@yogidhoni" target="_blank" rel="noopener noreferrer">              <FaYoutube className="text-red-500" />
+            <a href="https://youtube.com/@yogidhoni?si=i3zL4SCPigHWB-P3" target="_blank" rel="noopener noreferrer">
+              <FaYoutube className="text-red-500" />
             </a>
 
           </div>
