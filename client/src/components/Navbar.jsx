@@ -64,25 +64,23 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
 
           {/* ICONS */}
-          <div className="hidden md:flex gap-4 text-lg">
+     <div className="hidden md:flex gap-4 text-lg">
+  <a href="https://github.com/YogeswararaoKuna" target="_blank" rel="noopener noreferrer">
+    <FaGithub />
+  </a>
 
-            <a href="https://github.com/YogeswararaoKuna" target="_blank" rel="noopener noreferrer">
-              <FaGithub />
-            </a>
+  <a href="https://www.linkedin.com/in/yogeswara-rao-kuna-a166802b9" target="_blank" rel="noopener noreferrer">
+    <FaLinkedin />
+  </a>
 
-            <a href="https://www.linkedin.com/in/yogeswara-rao-kuna-a166802b9" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin />
-            </a>
+  <a href="https://leetcode.com/u/kuna_yogeswararao/" target="_blank" rel="noopener noreferrer">
+    <SiLeetcode />
+  </a>
 
-            <a href="https://leetcode.com/u/kuna_yogeswararao/" target="_blank" rel="noopener noreferrer">
-              <SiLeetcode />
-            </a>
-
-            <a href="https://youtube.com/@yogidhoni?si=i3zL4SCPigHWB-P3" target="_blank" rel="noopener noreferrer">
-              <FaYoutube />
-            </a>
-
-          </div>
+  <a href="https://youtube.com/@yogidhoni?si=i3zL4SCPigHWB-P3" target="_blank" rel="noopener noreferrer">
+    <FaYoutube />
+  </a>
+</div>
 
           {/* DARK MODE */}
           <button
